@@ -1,0 +1,124 @@
+
+<div style="padding: 1rem 0; font-family: var(--font-sans);">
+
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-bottom: 1.5rem;">
+  <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 1rem; text-align: center;">
+    <p style="font-size: 13px; color: var(--color-text-secondary); margin: 0 0 4px;">40대 인구</p>
+    <p style="font-size: 22px; font-weight: 500; margin: 0;">3,042명</p>
+    <p style="font-size: 12px; color: var(--color-text-secondary); margin: 4px 0 0;">전체 인구의 44%</p>
+  </div>
+  <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 1rem; text-align: center;">
+    <p style="font-size: 13px; color: var(--color-text-secondary); margin: 0 0 4px;">종합소매 총수요</p>
+    <p style="font-size: 22px; font-weight: 500; margin: 0;">26.9억</p>
+    <p style="font-size: 12px; color: var(--color-text-secondary); margin: 4px 0 0;">DSI 1,320만원</p>
+  </div>
+  <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 1rem; text-align: center;">
+    <p style="font-size: 13px; color: var(--color-text-secondary); margin: 0 0 4px;">식료품 총수요</p>
+    <p style="font-size: 22px; font-weight: 500; margin: 0;">8.24억</p>
+    <p style="font-size: 12px; color: var(--color-text-secondary); margin: 4px 0 0;">업소 21개 과부하</p>
+  </div>
+  <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 1rem; text-align: center;">
+    <p style="font-size: 13px; color: var(--color-text-secondary); margin: 0 0 4px;">40대 남 식료품 DSI</p>
+    <p style="font-size: 22px; font-weight: 500; margin: 0;">1,924만</p>
+    <p style="font-size: 12px; color: var(--color-text-secondary); margin: 4px 0 0;">업소당 최대 부하</p>
+  </div>
+</div>
+
+<div style="display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 20px; margin-bottom: 1.5rem;">
+  <div>
+    <p style="font-size: 13px; color: var(--color-text-secondary); margin: 0 0 8px;">동면 연령대별 인구</p>
+    <div style="position: relative; height: 200px;">
+      <canvas id="popChart" role="img" aria-label="동면 연령대별 인구 구성">20대 남 917, 20대 여 797, 30대 남 862, 30대 여 857, 40대 남 1457, 40대 여 1585</canvas>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;font-size:12px;color:var(--color-text-secondary);">
+      <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#9FE1CB;"></span>20대</span>
+      <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#7F77DD;"></span>30대</span>
+      <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#D85A30;"></span>40대</span>
+    </div>
+  </div>
+
+  <div>
+    <p style="font-size: 13px; color: var(--color-text-secondary); margin: 0 0 8px;">동면 소비 TOP 카테고리 (억원)</p>
+    <div style="position: relative; height: 200px;">
+      <canvas id="catChart" role="img" aria-label="동면 소비 상위 카테고리">종합소매 26.9, 연료판매 13.2, 식료품 8.2, 한식 4.6, 일반병원 3.0</canvas>
+    </div>
+  </div>
+</div>
+
+<div style="margin-bottom: 1.5rem;">
+  <p style="font-size: 13px; color: var(--color-text-secondary); margin: 0 0 8px;">음/식료품소매 — 연령대별 수요 vs 업소수 (업소 21개 고정)</p>
+  <div style="position: relative; height: 200px;">
+    <canvas id="dsiChart" role="img" aria-label="연령대별 식료품 DSI">40대 남 1924만, 40대 여 957만, 30대 남 427만, 30대 여 343만, 20대 남 179만, 20대 여 94만</canvas>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;font-size:12px;color:var(--color-text-secondary);">
+    <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#D85A30;"></span>40대 남</span>
+    <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#F0997B;"></span>40대 여</span>
+    <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#7F77DD;"></span>30대 남</span>
+    <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#AFA9EC;"></span>30대 여</span>
+    <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#5DCAA5;"></span>20대 남</span>
+    <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#9FE1CB;"></span>20대 여</span>
+  </div>
+</div>
+
+<div>
+  <p style="font-size: 13px; color: var(--color-text-secondary); margin: 0 0 8px;">마트 대체 카테고리 DSI (만원, 연령대 평균)</p>
+  <div style="position: relative; height: 160px;">
+    <canvas id="martChart" role="img" aria-label="마트 대체 카테고리 DSI">종합소매 1320만, 식료품 654만, 패스트푸드 397만, 제과 96만</canvas>
+  </div>
+</div>
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+const isDark = matchMedia('(prefers-color-scheme: dark)').matches;
+const gc = isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.07)';
+const tc = isDark ? '#aaa' : '#666';
+
+new Chart(document.getElementById('popChart'), {
+  type: 'bar',
+  data: {
+    labels: ['20대 남','20대 여','30대 남','30대 여','40대 남','40대 여'],
+    datasets: [{ data: [917,797,862,857,1457,1585],
+      backgroundColor: ['#9FE1CB','#9FE1CB','#7F77DD','#7F77DD','#D85A30','#D85A30'], borderWidth: 0 }]
+  },
+  options: { responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}},
+    scales:{ x:{ticks:{color:tc,font:{size:11}},grid:{color:gc}}, y:{ticks:{color:tc,font:{size:11},callback:v=>v.toLocaleString()},grid:{color:gc}} }
+  }
+});
+
+new Chart(document.getElementById('catChart'), {
+  type: 'bar',
+  data: {
+    labels: ['종합소매점','연료판매','음/식료품소매','한식','일반병원','고기요리','커피/음료'],
+    datasets: [{ data: [26.9,13.2,8.2,4.6,3.0,1.7,1.5],
+      backgroundColor: ['#7F77DD','#888780','#1D9E75','#EF9F27','#378ADD','#D85A30','#5DCAA5'], borderWidth: 0 }]
+  },
+  options: { responsive:true, maintainAspectRatio:false, indexAxis:'y', plugins:{legend:{display:false}},
+    scales:{ x:{ticks:{color:tc,font:{size:11},callback:v=>v+'억'},grid:{color:gc}}, y:{ticks:{color:tc,font:{size:10}},grid:{color:gc}} }
+  }
+});
+
+new Chart(document.getElementById('dsiChart'), {
+  type: 'bar',
+  data: {
+    labels: ['40대 남','40대 여','30대 남','30대 여','20대 남','20대 여'],
+    datasets: [{ data: [1924,957,427,343,179,94],
+      backgroundColor: ['#D85A30','#F0997B','#7F77DD','#AFA9EC','#5DCAA5','#9FE1CB'], borderWidth: 0 }]
+  },
+  options: { responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}},
+    scales:{ x:{ticks:{color:tc,font:{size:11}},grid:{color:gc}}, y:{ticks:{color:tc,font:{size:11},callback:v=>v+'만'},grid:{color:gc}} }
+  }
+});
+
+new Chart(document.getElementById('martChart'), {
+  type: 'bar',
+  data: {
+    labels: ['종합소매점','음/식료품소매','패스트푸드','제과/제빵'],
+    datasets: [{ data: [1320,654,397,96],
+      backgroundColor: ['#7F77DD','#1D9E75','#EF9F27','#D85A30'], borderWidth: 0 }]
+  },
+  options: { responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}},
+    scales:{ x:{ticks:{color:tc,font:{size:11}},grid:{color:gc}}, y:{ticks:{color:tc,font:{size:11},callback:v=>v+'만'},grid:{color:gc}} }
+  }
+});
+</script>
